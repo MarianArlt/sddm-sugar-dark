@@ -1,6 +1,6 @@
-![Screenshot of the interface of the Sugar Light theme for SDDM](Previews/Mockup.jpg "The default interface of the Sugar Light theme for SDDM")
+![Screenshot of the interface of the Sugar Dark theme for SDDM](Previews/Mockup.jpg "The default interface of the Sugar Dark theme for SDDM")
 
-# Sugar Light login theme for SDDM
+# Sugar Dark login theme for SDDM
 
 Sugar is extremely customizable and so sweet it will probably cause you diabetes just from looking at it. Sweeten the login experience for your users, your family and yourself. Sugar is cross platform and all about user experience and functionality.
 With those principles in mind Sugar was written completely from scratch making it clean and simple not only by looks but by design too.  
@@ -21,7 +21,7 @@ This is just a teaser. There are 27 customizable variables in total! This sugar 
 
 ###### From KDE Plasma
 
-If you are on [KDE Plasma](https://www.kde.org/plasma-desktop)—by default [openSuse](https://www.opensuse.org/), [Neon](https://neon.kde.org/), [Kubuntu](https://kubuntu.org/), [KaOS](https://kaosx.us/) or [Chakra](https://www.chakralinux.org/) for example—you are lucky and can simply go to your system settings and under "Startup and Shutdown" followed by "Login Screen (SDDM)" click "Get New Theme". From there search for "Sugar Light" and install.
+If you are on [KDE Plasma](https://www.kde.org/plasma-desktop)—by default [openSuse](https://www.opensuse.org/), [Neon](https://neon.kde.org/), [Kubuntu](https://kubuntu.org/), [KaOS](https://kaosx.us/) or [Chakra](https://www.chakralinux.org/) for example—you are lucky and can simply go to your system settings and under "Startup and Shutdown" followed by "Login Screen (SDDM)" click "Get New Theme". From there search for "Sugar Dark" and install.
 
 If for some reason you cannot find the category named "Login Screen (SDDM)" in your system settings then you are missing `sddm-kcm`. Install this little helper with your package manager first. You will be grateful you did.
 
@@ -48,11 +48,11 @@ Please read the [Sugar Wiki on Github](https://github.com/MarianArlt/sddm-sugar-
 
 Copyright (C) 2018 Marian Arlt.  
 
-Sugar Light is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.  
+Sugar Dark is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.  
 
-Sugar Light is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.  
+Sugar Dark is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.  
 
-You should have received a copy of the GNU General Public License along with Sugar Light. If not, see <https://www.gnu.org/licenses/>.
+You should have received a copy of the GNU General Public License along with Sugar Dark. If not, see <https://www.gnu.org/licenses/>.
 
 [Mockup psd created by Qeaql-studio - Freepik.com](https://www.freepik.com/free-photos-vectors/mockup)
 
