@@ -27,7 +27,7 @@ If for some reason you cannot find the category named "Login Screen (SDDM)" in y
 
 ###### From other desktop environments
 
-[Download the tar archive from openDesktop](https://www.opendesktop.org/p/1240784) and extract the contents to the theme directory of SDDM *(change the path for the downloaded file if necessary)*:
+[Download the tar archive from openDesktop](https://www.opendesktop.org/p/1272122/startdownload?file_id=1541139848&file_name=sugar-dark.tar.gz&file_type=application/x-gzip&file_size=2245599&url=https%3A%2F%2Fdl.opendesktop.org%2Fapi%2Ffiles%2Fdownload%2Fid%2F1541139848%2Fs%2F5abdcd061860dc82a0f24db2eb7bb5b3%2Ft%2F1541143367%2Fu%2F449651%2Fsugar-dark.tar.gz) and extract the contents to the theme directory of SDDM *(change the path for the downloaded file if necessary)*:
 ```
 $ sudo tar -xzvf ~/Downloads/sddm-chili.tar.gz -C /usr/share/sddm/themes
 ```
