@@ -1,0 +1,47 @@
+//
+// This file is part of Sugar Light, a theme for the Simple Display Desktop Manager.
+//
+// Copyright 2018 Marian Arlt
+//
+// Sugar Light is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Sugar Light is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Sugar Light. If not, see <https://www.gnu.org/licenses/>.
+//
+
+import QtQuick 2.11
+import QtQuick.Layouts 1.11
+import SddmComponents 2.0 as SDDM
+
+ColumnLayout {
+    id: formContainer
+    SDDM.TextConstants { id: textConstants }
+
+    Clock {
+        id: clock
+        Layout.alignment: Qt.AlignHCenter | Qt.AlignBottom
+        Layout.preferredHeight: root.height / 4
+    }
+
+    Input {
+        id: input
+        Layout.alignment: Qt.AlignTop
+        Layout.preferredHeight: root.height / 10
+    }
+
+    SystemButtons {
+        id: systemButtons
+        Layout.alignment: Qt.AlignHCenter | Qt.AlignBottom
+        Layout.preferredHeight: root.height / 4
+        exposedLogin: input.exposeLogin
+    }
+
+}
