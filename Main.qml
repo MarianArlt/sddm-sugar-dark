@@ -36,7 +36,7 @@ Pane{
     palette.highlight: config.ThemeColor
     palette.text: config.ThemeColor
     palette.buttonText: config.ThemeColor
-    palette.window: "#444444"
+    palette.window: config.PanelColor
 
     font.family: config.Font
     font.pointSize: config.FontSize !== "" ? config.FontSize : parseInt(height / 80)
