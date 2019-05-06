@@ -14,7 +14,7 @@ Sugar comes in two flavors. This one is for the bitter sweet. You can also check
 
 ### Dependencies
 
-[`sddm >= 0.18.0`](https://github.com/sddm/sddm), [`qt5 >= 5.11`](http://doc.qt.io/qt-5/index.html), & [`qt5-quickcontrols >= 5.11.2`](http://doc.qt.io/qt-5/qtquickcontrols2-index.html)
+[`sddm >= 0.18.0`](https://github.com/sddm/sddm), [`qt5 >= 5.11`](http://doc.qt.io/qt-5/index.html), [`qt5-quickcontrols >= 5.11.2`](http://doc.qt.io/qt-5/qtquickcontrols2-index.html), [`qt5-svg`](https://doc.qt.io/qt-5/qtsvg-index.html)
 
 *Make sure these are up to date!*
 
