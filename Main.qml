@@ -48,7 +48,7 @@ Pane{
 
         LoginForm {
             Layout.minimumHeight: parent.height
-            Layout.maximumWidth: parent.width / 2.5
+            Layout.maximumWidth: parent.width / config.InterfaceWidthDivider
         }
 
         Item {
