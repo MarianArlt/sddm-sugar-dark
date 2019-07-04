@@ -1,7 +1,7 @@
 //
 // This file is part of Sugar Dark, a theme for the Simple Display Desktop Manager.
 //
-// Copyright 2018 Marian Arlt
+// Copyright 2018-2019 Marian Arlt
 //
 // Sugar Dark is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
