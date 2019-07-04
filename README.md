@@ -40,8 +40,10 @@ In the `[Theme]` section simply add the themes name: `Current=sugar-dark`. Also 
 
 ### Theming the theme
 
-Sugar is extremely customizable by editing its included `theme.conf` file. You can change the colors and images used, the time and date formats, the appearance of the whole interface and even how it works.  
+Sugar is extremely customizable by either (not recommended) editing its defaults in included `theme.conf` file or by creating `threme.conf.user` in the same directory with all the custom settings in it. The latter approach would prevent your settings from being overwritten by theme updates. You can change the colors and images used, the time and date formats, the appearance of the whole interface and even how it works.  
 And as if that wouldn't still be enough you can translate every single button and label because SDDM is still lacking behind with localization and clearly [needs your help](https://github.com/sddm/sddm/wiki/Localization)!
+
+To test your changes invoke `sddm-greeter --test-mode --theme <PATH-TO-THEME>`.
 
 Please read the [Sugar Wiki on Github](https://github.com/MarianArlt/sddm-sugar-light/wiki/Before-you-begin) for a detailed description of every variable available, what it does and the values it accepts. The `theme.conf` itself is also very well commented for you to get right at it.
 
