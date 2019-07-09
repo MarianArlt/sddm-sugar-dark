@@ -1,11 +1,11 @@
 [SddmGreeterTheme]
 Name=Sugar Dark
 Description=The sweetest theme around; Dark!
-Author=Marian Alexander Arlt
+Author=Marian Arlt
 Copyright=Copyright (C) 2018 Marian Arlt
 License=GPL-3.0-or-later
 Type=sddm-theme
-Version=1.0
+Version=1.2
 Website=https://github.com/MarianArlt/sddm-sugar-dark
 Screenshot=Preview.png
 MainScript=Main.qml
