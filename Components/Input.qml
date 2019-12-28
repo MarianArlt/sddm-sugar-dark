@@ -49,6 +49,7 @@ Column {
             model: userModel
             currentIndex: model.lastIndex
             textRole: "name"
+            displayText: ""
             hoverEnabled: true
             onActivated: {
                 username.text = currentText
