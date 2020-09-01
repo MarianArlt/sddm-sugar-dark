@@ -37,7 +37,7 @@ RowLayout {
         model: [suspend, hibernate, reboot, shutdown]
 
         RoundButton {
-            enabled: modelData[2]
+            id: icon
             text: modelData[1]
             font.pointSize: root.font.pointSize * 0.8
             Layout.alignment: Qt.AlignHCenter
@@ -45,7 +45,7 @@ RowLayout {
             icon.height: 2 * Math.round((root.font.pointSize * 3) / 2)
             icon.width: 2 * Math.round((root.font.pointSize * 3) / 2)
             display: AbstractButton.TextUnderIcon
-            opacity: modelData[2] ? 1 : 0.3
+            visible: modelData[2]
             hoverEnabled: true
             palette.buttonText: root.palette.text
             background: Rectangle {
@@ -70,11 +70,11 @@ RowLayout {
                     when: parent.children[index].down
                     PropertyChanges {
                         target: parent.children[index]
-                        palette.buttonText: Qt.lighter("red", 1.1)
+                        palette.buttonText: Qt.darker(root.palette.highlight, 1.1)
                     }
                     PropertyChanges {
                         target: parent.children[index].background
-                        border.color: Qt.lighter("red", 1.3)
+                        border.color: Qt.darker(root.palette.highlight, 1.1)
                     }
                 },
                 State {
@@ -82,11 +82,11 @@ RowLayout {
                     when: parent.children[index].hovered
                     PropertyChanges {
                         target: parent.children[index]
-                        palette.buttonText: Qt.lighter("red", 1.5)
+                        palette.buttonText: Qt.lighter(root.palette.highlight, 1.1)
                     }
                     PropertyChanges {
                         target: parent.children[index].background
-                        border.color: Qt.lighter("red", 1.7)
+                        border.color: Qt.lighter(root.palette.highlight, 1.1)
                     }
                 },
                 State {
@@ -94,11 +94,11 @@ RowLayout {
                     when: parent.children[index].visualFocus
                     PropertyChanges {
                         target: parent.children[index]
-                        palette.buttonText: Qt.lighter("red", 1.3)
+                        palette.buttonText: root.palette.highlight
                     }
                     PropertyChanges {
                         target: parent.children[index].background
-                        border.color: Qt.lighter("red", 1.5)
+                        border.color: root.palette.highlight
                     }
                 }
             ]

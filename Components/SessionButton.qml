@@ -19,6 +19,7 @@
 
 import QtQuick 2.11
 import QtQuick.Controls 2.4
+import QtGraphicalEffects 1.0
 
 Item {
     id: sessionButton
@@ -32,9 +33,8 @@ Item {
     ComboBox {
         id: selectSession
 
-        anchors.horizontalCenter: parent.horizontalCenter
-        width: parent.width
         hoverEnabled: true
+        anchors.left: parent.left
 
         model: sessionModel
         currentIndex: model.lastIndex
@@ -46,13 +46,13 @@ Item {
             contentItem: Text {
                 text: model.name
                 font.pointSize: root.font.pointSize * 0.8
-                color: selectSession.highlightedIndex === index ? "white" : root.palette.text
+                color: selectSession.highlightedIndex === index ? "#444" : root.palette.highlight
                 verticalAlignment: Text.AlignVCenter
                 horizontalAlignment: Text.AlignHCenter
             }
             highlighted: parent.highlightedIndex === index
             background: Rectangle {
-                color: selectSession.highlightedIndex === index ? root.palette.text : "transparent"
+                color: selectSession.highlightedIndex === index ? root.palette.highlight : "transparent"
             }
         }
 
@@ -63,44 +63,53 @@ Item {
         contentItem: Text {
             id: displayedItem
             text: (config.TranslateSession || (textConstantSession + ":")) + " " + selectSession.currentText
-            color: root.palette.text // parent.down ? root.palette.text : parent.hovered ? Qt.lighter(root.palette.text, 1.8) : root.palette.text
+            color: root.palette.text
             verticalAlignment: Text.AlignVCenter
-            horizontalAlignment: Text.AlignLeft
+            anchors.left: parent.left
+            anchors.leftMargin: 3
             font.pointSize: root.font.pointSize * 0.8
         }
 
         background: Rectangle {
             color: "transparent"
             border.width: parent.visualFocus ? 1 : 0
-            border.color: "transparent" // parent.visualFocus ? root.palette.text : "transparent"
+            border.color: "transparent"
             height: parent.visualFocus ? 2 : 0
             width: displayedItem.implicitWidth
             anchors.top: parent.bottom
             anchors.left: parent.left
+            anchors.leftMargin: 3
         }
 
         popup: Popup {
             id: popupHandler
             y: parent.height - 1
-            width: parent.width
+            rightMargin: config.ForceRightToLeft == "true" ? root.padding + sessionButton.width / 2 : undefined
+            width: sessionButton.width
             implicitHeight: contentItem.implicitHeight
-            padding: 1
+            padding: 10
 
             contentItem: ListView {
-                clip: false
-                implicitHeight: contentHeight
+                clip: true
+                implicitHeight: contentHeight + 20
                 model: selectSession.popup.visible ? selectSession.delegateModel : null
                 currentIndex: selectSession.highlightedIndex
                 ScrollIndicator.vertical: ScrollIndicator { }
             }
 
             background: Rectangle {
-                width: parent.width
-                height: parent.height
-                anchors.horizontalCenter: parent.horizontalCenter
-                anchors.bottom: parent.bottom
-                border.width: 1
-                border.color: root.palette.text
+                radius: config.RoundCorners / 2
+                color: "#444"
+                layer.enabled: true
+                layer.effect: DropShadow {
+                    transparentBorder: true
+                    horizontalOffset: 0
+                    verticalOffset: 0
+                    radius: 100
+                    samples: 201
+                    cached: true
+                    color: "#88000000"
+                }
             }
 
             enter: Transition {
@@ -114,11 +123,11 @@ Item {
                 when: selectSession.down
                 PropertyChanges {
                     target: displayedItem
-                    color: Qt.lighter(config.AccentColor, 1.1)
+                    color: Qt.darker(root.palette.highlight, 1.1)
                 }
                 PropertyChanges {
                     target: selectSession.background
-                    border.color: Qt.lighter(config.AccentColor, 1.1)
+                    border.color: Qt.darker(root.palette.highlight, 1.1)
                 }
             },
             State {
@@ -126,11 +135,11 @@ Item {
                 when: selectSession.hovered
                 PropertyChanges {
                     target: displayedItem
-                    color: Qt.lighter(config.AccentColor, 1.3)
+                    color: Qt.lighter(root.palette.highlight, 1.1)
                 }
                 PropertyChanges {
                     target: selectSession.background
-                    border.color: Qt.lighter(config.AccentColor, 1.3)
+                    border.color: Qt.lighter(root.palette.highlight, 1.1)
                 }
             },
             State {
@@ -138,11 +147,11 @@ Item {
                 when: selectSession.visualFocus
                 PropertyChanges {
                     target: displayedItem
-                    color: config.AccentColor
+                    color: root.palette.highlight
                 }
                 PropertyChanges {
                     target: selectSession.background
-                    border.color: config.AccentColor
+                    border.color: root.palette.highlight
                 }
             }
         ]
